@@ -124,3 +124,55 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# american server config
+
+# MYSQL_HOST = '127.0.0.1'
+# MYSQL_PORT = 3306
+# MYSQL_DBNAME = 'america_estate_original_db'
+# MYSQL_USER = 'root'
+# MYSQL_PASSWORD = 'saninco123#@!'
+
+# local windows mysql config
+MYSQL_HOST = '127.0.0.1'
+MYSQL_PORT = 3306
+MYSQL_DBNAME = 'america_real_estate'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '123456'
+
+# local linux mysql config
+# MYSQL_HOST = '192.168.0.65'
+# MYSQL_PORT = 3306
+# MYSQL_DBNAME = 'america_estate_data_db'
+# MYSQL_USER = 'root'
+# MYSQL_PASSWORD = 'saninco123#@!'
+
+
+
+import pandas as pd
+
+# local configure
+# server_root_path = r'F:\PycharmProject\AmericaSpiderServer'
+# realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+
+# server configure
+server_root_path = r'/usr/project/AmericaSpiderServer'
+# server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
+realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+
+
+spider_server_domain = "http://106.12.196.106:5000"
+# spider_server_domain = "http://192.168.0.211:5000"
+# spider_server_domain = "http://127.0.0.1:5001"
+
+spider_detail_start_url = spider_server_domain +'/start_detail_spider/'
+spider_list_start_url = spider_server_domain + '/start_list_spider/'
+
+
+spider_server_domain2 = "http://106.12.196.86:5000"
+# spider_server_domain = "http://192.168.0.211:5000"
+# spider_server_domain = "http://127.0.0.1:5001"
+
+spider_detail_start_url2 = spider_server_domain2 +'/start_detail_spider/'
+spider_list_start_ur2 = spider_server_domain2 + '/start_list_spider/'

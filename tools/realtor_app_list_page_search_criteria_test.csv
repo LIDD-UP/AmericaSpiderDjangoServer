@@ -1,0 +1,6 @@
+countyStateJoin
+https://mapi-ng.rdc.moveaws.com/api/v1/properties?offset=0&limit=200&county=Autauga&state_code=AL&sort=relevance&schema=mapsearch&client_id=rdc_mobile_native%2C9.4.2%2Candroid
+https://mapi-ng.rdc.moveaws.com/api/v1/properties?offset=0&limit=200&county=Scott&state_code=KY&sort=relevance&schema=mapsearch&client_id=rdc_mobile_native%2C9.4.2%2Candroid
+https://mapi-ng.rdc.moveaws.com/api/v1/properties?offset=0&limit=200&county=Shelby&state_code=KY&sort=relevance&schema=mapsearch&client_id=rdc_mobile_native%2C9.4.2%2Candroid
+https://mapi-ng.rdc.moveaws.com/api/v1/properties?offset=0&limit=200&county=Simpson&state_code=KY&sort=relevance&schema=mapsearch&client_id=rdc_mobile_native%2C9.4.2%2Candroid
+https://mapi-ng.rdc.moveaws.com/api/v1/properties?offset=0&limit=200&county=Spencer&state_code=KY&sort=relevance&schema=mapsearch&client_id=rdc_mobile_native%2C9.4.2%2Candroid
