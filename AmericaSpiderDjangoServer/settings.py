@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import sys
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -154,10 +157,11 @@ import pandas as pd
 
 # local configure
 # server_root_path = r'F:\PycharmProject\AmericaSpiderServer'
+server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
-server_root_path = r'/usr/project/AmericaSpiderServer'
+# server_root_path = r'/usr/project/AmericaSpiderServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
 realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 

@@ -8,6 +8,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 executor = ThreadPoolExecutor(1)
 import json
+from spider_server.models import RealtorListPageJson
 
 
 def index(request):
@@ -43,6 +44,17 @@ def list_page_process_fn(list_data):
 
 # 列表页数据的插入操作
 def process_list_page_json(request):
+
+    print(request.body)
+    data_loads = json.loads(request.body)
+    print(type(data_loads))
+    json_dict = json.loads(data_loads)
+    print(type(json.loads(data_loads)))
+
+    RealtorListPageJson.objects.create(json_data=json.dumps(json_dict))
+
+
+
     # app.app_context().push()
     # print(request.get_json())
     # json_data = request.get_json()
