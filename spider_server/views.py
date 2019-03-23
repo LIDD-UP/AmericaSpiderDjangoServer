@@ -22,9 +22,15 @@ def process_before_start_list_spider(request):
     return HttpResponse("yes")
 
 
+def start_list_spider_requests_fn(url):
+    requests.get(url)
+
 def start_list_spider(request):
     print("启动列表页爬虫")
-    # requests.get(spider_list_start_url)
+    spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
+    spider_thread1.start()
+    spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
+    spider_thread2.start()
     return HttpResponse("execute successfully")
 
 
@@ -57,10 +63,16 @@ def spider_close_process(request):
     return HttpResponse("list json process successfully")
 
 
+def start_detial_spider_requests_fn(url):
+    requests.get(url=url)
+
 # 详情页爬虫启动
 def start_detail_spider(request):
     print("启动详情页爬虫")
-    # requests.get(url=spider_detail_start_url)
+    spider_thread1 = threading.Thread(target=start_detial_spider_requests_fn,args=(spider_detail_start_url,))
+    spider_thread1.start()
+    spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
+    spider_thread2.start()
     return HttpResponse("execute successfully")
 
 
@@ -117,5 +129,7 @@ def json_data_get_test(request):
     return HttpResponse(
         "test successful!!!!"
     )
+
+
 
 
