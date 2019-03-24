@@ -140,7 +140,8 @@ STATIC_URL = '/static/'
 # local windows mysql config
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_DBNAME = 'america_real_estate'
+# MYSQL_DBNAME = 'america_real_estate'
+MYSQL_DBNAME = 'test'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = '123456'
 
@@ -157,7 +158,8 @@ import pandas as pd
 
 # local configure
 # server_root_path = r'F:\PycharmProject\AmericaSpiderServer'
-server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
+# server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
+server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
@@ -166,7 +168,8 @@ server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
 realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 
-spider_server_domain = "http://106.12.196.106:5000"
+# spider_server_domain = "http://106.12.196.106:5000"
+spider_server_domain = "http://127.0.0.1:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
 # spider_server_domain = "http://127.0.0.1:5001"
 
@@ -180,3 +183,30 @@ spider_server_domain2 = "http://106.12.196.86:5000"
 
 spider_detail_start_url2 = spider_server_domain2 +'/start_detail_spider/'
 spider_list_start_ur2 = spider_server_domain2 + '/start_list_spider/'
+
+
+import pymysql
+from DBUtils.PooledDB import PooledDB
+
+PYMYSQL_POOL = PooledDB(
+    creator=pymysql,  # 使用链接数据库的模块
+    maxconnections=0,  # 连接池允许的最大连接数，0和None表示不限制连接数
+    mincached=2,  # 初始化时，链接池中至少创建的空闲的链接，0表示不创建
+    maxcached=5,  # 链接池中最多闲置的链接，0和None不限制
+    maxshared=3,
+    # 链接池中最多共享的链接数量，0和None表示全部共享。PS: 无用，因为pymysql和MySQLdb等模块的 threadsafety都为1，所有值无论设置为多少，_maxcached永远为0，所以永远是所有链接都共享。
+    blocking=True,  # 连接池中如果没有可用连接后，是否阻塞等待。True，等待；False，不等待然后报错
+    maxusage=None,  # 一个链接最多被重复使用的次数，None表示无限制
+    setsession=[],  # 开始会话前执行的命令列表。如：["set datestyle to ...", "set time zone ..."]
+    ping=0,
+    # ping MySQL服务端，检查是否服务可用。# 如：0 = None = never, 1 = default = whenever it is requested, 2 = when a cursor is created, 4 = when a query is executed, 7 = always
+    host='127.0.0.1',
+    port=3306,
+    user='root',
+    password='123456',
+    # database='america_real_estate',#链接的数据库的名字
+    database='test',
+    # password='saninco123#@!',
+    # database='america_estate_original_db',#链接的数据库的名字
+    charset='utf8'
+)

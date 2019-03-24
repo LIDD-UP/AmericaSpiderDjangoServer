@@ -1,7 +1,7 @@
 # -*- coding:utf-8 _*-  
 """ 
 @author:Administrator
-@file: test_post.py
+@file: te_post.py
 @time: 2019/3/15
 """
 import requests
@@ -44,11 +44,27 @@ import os
 # req = requests.post(url='http://138.197.143.39:5000/process_detail_page_json/',json='{"aa":"11"}')
 
 import time
-while True:
-    time_now = time.time()
-    req = requests.post(url='http://138.197.143.39:5000/process_detail_page_json/', json=json.dumps('{"aa":"11"}'))
-    # print(req.text)
-    print(time.time()-time_now)
+# while True:
+#     time_now = time.time()
+#     req = requests.post(url='http://138.197.143.39:5000/process_detail_page_json/', json=json.dumps('{"aa":"11"}'))
+#     # print(req.text)
+#     print(time.time()-time_now)
+
+
+# req = requests.get(url='http://127.0.0.1:8000/spider_server/spider_close_process/',data='yes')
+# print(req.text)
+
+from AmericaSpiderDjangoServer.settings import PYMYSQL_POOL
+
+conn = PYMYSQL_POOL.connection()
+print(conn)
+from spider_server.process_data import RealtordetailPageMysqlPipeline
+realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
+print("11")
+data ='{"aa":"bb"}'
+
+realtor_detail_test.traversal_json_data(data)
+
 
 
 

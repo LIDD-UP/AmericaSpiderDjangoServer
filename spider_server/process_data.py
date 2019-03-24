@@ -10,7 +10,7 @@
 import json
 # from tools import get_sql_con
 import redis
-from AmericaSpiderServer.settings import realtor_list_search_criteria
+from AmericaSpiderDjangoServer.settings import realtor_list_search_criteria
 
 
 class RealtorListPageMysqlsqlPipeline(object):
@@ -56,7 +56,8 @@ class RealtordetailPageMysqlPipeline(object):
     def traversal_json_data(self,json_data):
         json_data = json.loads(json_data)
         for format_data in json_data['data']:
-            self.detail_houses.append((json.dumps(format_data['detailJson']),json.dumps(format_data['propertyId'])))
+            self.detail_houses.append((json.dumps(format_data['detailJson']),int(json.dumps(format_data['propertyId']))))
+
         self.cursor.executemany(self.sql, self.detail_houses)
         print("插入数据成功")
         self.conn.commit()
@@ -72,9 +73,9 @@ class RealtorListProcess(object):
         import redis
         pool = redis.ConnectionPool(
                                     # host='106.12.196.86',
-                                    # host='127.0.0.1',
+                                    host='127.0.0.1',
                                     # host='138.197.143.39',
-                                    host='106.12.196.106',
+                                    # host='106.12.196.106',
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
@@ -295,9 +296,9 @@ class SpiderCloseProcess(object):
         import redis
         pool = redis.ConnectionPool(
                                     # host='106.12.196.86',
-                                    # host='127.0.0.1',
+                                    host='127.0.0.1',
                                     # host = '138.197.143.39',
-                                    host= '106.12.196.106'
+                                    # host= '106.12.196.106'
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
@@ -352,5 +353,6 @@ if __name__ == "__main__":
     realtor_process.get_list_url()
     realtor_process.truncate_list_json_and_split_table()
     pass
+
 
 

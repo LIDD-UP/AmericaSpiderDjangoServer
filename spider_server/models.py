@@ -21,8 +21,8 @@ import json
 
 
 class RealtorListPageJson(models.Model):
-    json_data = models.TextField()
-    last_operation_date = models.DateTimeField('操作时间', default=timezone.now)
+    json_data = models.TextField(null=True)
+    last_operation_date = models.DateTimeField('操作时间', default=timezone.now,null=True)
 
     class Meta:
         db_table = 'tb_realtor_list_page_json'
@@ -30,16 +30,16 @@ class RealtorListPageJson(models.Model):
 
 class RealtorListPageJsonSplite(models.Model):
     property_id = models.BigIntegerField(primary_key=True)
-    last_update = models.DateTimeField('上次更新时间', default=timezone.now)
-    address = models.TextField()
-    last_operation_date = models.DateTimeField('操作时间', default=timezone.now)
-    lat = models.TextField()
-    lon = models.TextField()
-    beds = models.TextField()
-    sqft = models.TextField()
-    baths = models.TextField()
-    price = models.TextField()
-    lot_size = models.TextField()
+    last_update = models.TextField(null=True)
+    address = models.TextField(null=True)
+    last_operation_date = models.DateTimeField('操作时间', default=timezone.now,null=True)
+    lat = models.TextField(null=True)
+    lon = models.TextField(null=True)
+    beds = models.TextField(null=True)
+    sqft = models.TextField(null=True)
+    baths = models.TextField(null=True)
+    price = models.TextField(null=True)
+    lot_size = models.TextField(null=True)
 
     class Meta:
         db_table = 'tb_realtor_list_page_json_splite'
@@ -47,22 +47,24 @@ class RealtorListPageJsonSplite(models.Model):
 
 class RealtorDetailJson(models.Model):
     property_id = models.BigIntegerField(primary_key=True)
-    last_update = models.DateTimeField('上次更新时间', default=timezone.now)
-    address = models.TextField()
-    last_operation_date = models.DateTimeField('操作时间', default=timezone.now)
-    lat = models.TextField()
-    lon = models.TextField()
-    beds = models.TextField()
-    sqft = models.TextField()
-    baths = models.TextField()
-    price = models.TextField()
-    lot_size = models.TextField()
-    data_interface = models.TextField()
-    is_dirty = models.TextField()
-    detail_json = models.TextField()
+    last_update = models.TextField(null=True)
+    address = models.TextField(null=True)
+    last_operation_date = models.DateTimeField('操作时间', default=timezone.now,null=True)
+    lat = models.TextField(null=True)
+    lon = models.TextField(null=True)
+    beds = models.TextField(null=True)
+    sqft = models.TextField(null=True)
+    baths = models.TextField(null=True)
+    price = models.TextField(null=True)
+    lot_size = models.TextField(null=True)
+    data_interface = models.TextField(null=True)
+    is_dirty = models.TextField(null=True)
+    detail_json = models.TextField(null=True)
 
     class Meta:
         db_table = 'tb_realtor_detail_json'
+
+
 
 
 
