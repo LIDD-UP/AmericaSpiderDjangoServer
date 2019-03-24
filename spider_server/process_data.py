@@ -82,8 +82,8 @@ class RealtorListProcess(object):
         redis_pool.flushdb()
         import time
         time_now = time.time()
-        for url in realtor_list_search_criteria:
-            print(url)
+        for index,url in enumerate(realtor_list_search_criteria):
+            print(index)
             redis_pool.lpush('realtor:list_url', url)
         print("list search_criteria 插入时间：{}s".format(time.time()-time_now))
 
