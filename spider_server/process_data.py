@@ -73,9 +73,9 @@ class RealtorListProcess(object):
         import redis
         pool = redis.ConnectionPool(
                                     # host='106.12.196.86',
-                                    host='127.0.0.1',
+                                    # host='127.0.0.1',
                                     # host='138.197.143.39',
-                                    # host='106.12.196.106',
+                                    host='106.12.196.106',
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
@@ -299,9 +299,9 @@ class SpiderCloseProcess(object):
         import redis
         pool = redis.ConnectionPool(
                                     # host='106.12.196.86',
-                                    host='127.0.0.1',
+                                    # host='127.0.0.1',
                                     # host = '138.197.143.39',
-                                    # host= '106.12.196.106'
+                                    host= '106.12.196.106'
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
