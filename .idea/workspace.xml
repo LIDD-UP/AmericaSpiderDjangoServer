@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/spider_server/migrations/0002_auto_20190324_1213.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/spider_server/migrations/0003_auto_20190324_1217.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/AmericaSpiderDjangoServer.iml" afterPath="$PROJECT_DIR$/.idea/AmericaSpiderDjangoServer.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" afterPath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
-      <change beforePath="$PROJECT_DIR$/spider_server/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/spider_server/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/spider_server/models.py" afterPath="$PROJECT_DIR$/spider_server/models.py" />
+      <change beforePath="$PROJECT_DIR$/spider_server/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spider_server/migrations/0002_auto_20190324_1213.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spider_server/migrations/0003_auto_20190324_1217.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/spider_server/process_data.py" afterPath="$PROJECT_DIR$/spider_server/process_data.py" />
       <change beforePath="$PROJECT_DIR$/spider_server/views.py" afterPath="$PROJECT_DIR$/spider_server/views.py" />
-      <change beforePath="$PROJECT_DIR$/tools/test_post.py" afterPath="$PROJECT_DIR$/tools/te_post.py" />
+      <change beforePath="$PROJECT_DIR$/tools/te_post.py" afterPath="$PROJECT_DIR$/tools/te_post.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +26,7 @@
     <SUITE FILE_PATH="coverage/AmericaSpiderDjangoServer$debug.coverage" NAME="debug Coverage Results" MODIFIED="1553326771527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AmericaSpiderDjangoServer$Twisted_Trial_in_test_sql_insert_py.coverage" NAME="Twisted Trial in test_sql_insert.py Coverage Results" MODIFIED="1553334028017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AmericaSpiderDjangoServer$post_json_data.coverage" NAME="post_json_data Coverage Results" MODIFIED="1553330602950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AmericaSpiderDjangoServer$te_post.coverage" NAME="te_post Coverage Results" MODIFIED="1553402919500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/AmericaSpiderDjangoServer$te_post.coverage" NAME="te_post Coverage Results" MODIFIED="1553408135561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -39,8 +36,28 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="207" column="20" lean-forward="true" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+            <state relative-caret-position="539">
+              <caret line="187" column="37" lean-forward="true" selection-start-line="187" selection-start-column="37" selection-end-line="187" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,8 +66,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spider_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+            <state relative-caret-position="-148">
+              <caret line="97" column="55" lean-forward="false" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -58,24 +75,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="realtor_app_list_page_search_criteria.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="3058" column="0" lean-forward="true" selection-start-line="3058" selection-start-column="0" selection-end-line="3058" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="process_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+            <state relative-caret-position="-7">
+              <caret line="298" column="8" lean-forward="true" selection-start-line="298" selection-start-column="8" selection-end-line="307" selection-end-column="28" />
               <folding>
                 <element signature="e#99#110#0" expanded="true" />
-                <marker date="1553403888182" expanded="true" signature="474:559" ph="insert into tb_realtor_list_page_json... " />
-                <marker date="1553403888182" expanded="true" signature="1371:1514" ph="UPDATE tb_realtor_detail_json... " />
-                <marker date="1553403888182" expanded="true" signature="3672:4417" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-                <marker date="1553403888182" expanded="true" signature="4578:4951" ph="UPDATE tb_realtor_detail_json... " />
-                <marker date="1553403888182" expanded="true" signature="6385:7270" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-                <marker date="1553403888182" expanded="true" signature="6522:7270" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-                <marker date="1553403888182" expanded="true" signature="7553:8283" ph="INSERT INTO tb_realtor_detail_json... " />
-                <marker date="1553403888182" expanded="true" signature="7699:8265" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-                <marker date="1553403888182" expanded="true" signature="8638:8889" ph="SELECT rl.pr... tb_realtor_detail_json" />
-                <marker date="1553403888182" expanded="true" signature="9050:9119" ph="DELETE FROM tb_realtor_detail_json... " />
-                <marker date="1553403888182" expanded="true" signature="10755:10913" ph="SELECT prope... tb_realtor_detail_json" />
+                <marker date="1553408135371" expanded="true" signature="474:559" ph="insert into tb_realtor_list_page_json... " />
+                <marker date="1553408135371" expanded="true" signature="1371:1514" ph="UPDATE tb_realtor_detail_json... " />
+                <marker date="1553408135371" expanded="true" signature="3799:4544" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+                <marker date="1553408135371" expanded="true" signature="4705:5078" ph="UPDATE tb_realtor_detail_json... " />
+                <marker date="1553408135371" expanded="true" signature="6512:7397" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+                <marker date="1553408135371" expanded="true" signature="6649:7397" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+                <marker date="1553408135371" expanded="true" signature="7680:8410" ph="INSERT INTO tb_realtor_detail_json... " />
+                <marker date="1553408135371" expanded="true" signature="7826:8392" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+                <marker date="1553408135371" expanded="true" signature="8765:9016" ph="SELECT rl.pr... tb_realtor_detail_json" />
+                <marker date="1553408135371" expanded="true" signature="9177:9246" ph="DELETE FROM tb_realtor_detail_json... " />
+                <marker date="1553408135371" expanded="true" signature="10882:11040" ph="SELECT prope... tb_realtor_detail_json" />
               </folding>
             </state>
           </provider>
@@ -84,8 +111,8 @@
       <file leaf-file-name="te_post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/te_post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
                 <element signature="e#91#106#0" expanded="true" />
               </folding>
@@ -97,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/spider_server/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,8 +142,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>csrf</find>
-      <find>lpush</find>
       <find>bulk</find>
+      <find>lpush</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,9 +163,9 @@
         <option value="$PROJECT_DIR$/te_sql_insert.py" />
         <option value="$PROJECT_DIR$/tools/test_post.py" />
         <option value="$PROJECT_DIR$/spider_server/models.py" />
-        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
-        <option value="$PROJECT_DIR$/tools/te_post.py" />
         <option value="$PROJECT_DIR$/spider_server/process_data.py" />
+        <option value="$PROJECT_DIR$/tools/te_post.py" />
+        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/views.py" />
       </list>
     </option>
@@ -528,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553343381375</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish bug no deploy">
+      <created>1553406919926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553406919926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -550,10 +584,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5074135" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24876441" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26523888" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@AmericaSpiderDjangoServer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46952224" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30427632" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18835099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -578,16 +612,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add async start spider" />
     <MESSAGE value="finish based file import" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish based file import" />
+    <MESSAGE value="finish bug no deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish bug no deploy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/spider_server/views.py</url>
-          <line>28</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -663,14 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -682,54 +703,78 @@
     <entry file="file://$PROJECT_DIR$/spider_server/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
+    <entry file="file://$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="207" column="20" lean-forward="true" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+        <state relative-caret-position="193">
+          <caret line="3058" column="0" lean-forward="true" selection-start-line="3058" selection-start-column="0" selection-end-line="3058" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="298" column="8" lean-forward="true" selection-start-line="298" selection-start-column="8" selection-end-line="307" selection-end-column="28" />
+          <folding>
+            <element signature="e#99#110#0" expanded="true" />
+            <marker date="1553408135371" expanded="true" signature="474:559" ph="insert into tb_realtor_list_page_json... " />
+            <marker date="1553408135371" expanded="true" signature="1371:1514" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553408135371" expanded="true" signature="3799:4544" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553408135371" expanded="true" signature="4705:5078" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553408135371" expanded="true" signature="6512:7397" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+            <marker date="1553408135371" expanded="true" signature="6649:7397" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+            <marker date="1553408135371" expanded="true" signature="7680:8410" ph="INSERT INTO tb_realtor_detail_json... " />
+            <marker date="1553408135371" expanded="true" signature="7826:8392" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553408135371" expanded="true" signature="8765:9016" ph="SELECT rl.pr... tb_realtor_detail_json" />
+            <marker date="1553408135371" expanded="true" signature="9177:9246" ph="DELETE FROM tb_realtor_detail_json... " />
+            <marker date="1553408135371" expanded="true" signature="10882:11040" ph="SELECT prope... tb_realtor_detail_json" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/te_post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
             <element signature="e#91#106#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-          <folding>
-            <element signature="e#99#110#0" expanded="true" />
-            <marker date="1553403888182" expanded="true" signature="474:559" ph="insert into tb_realtor_list_page_json... " />
-            <marker date="1553403888182" expanded="true" signature="1371:1514" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553403888182" expanded="true" signature="3672:4417" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553403888182" expanded="true" signature="4578:4951" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553403888182" expanded="true" signature="6385:7270" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-            <marker date="1553403888182" expanded="true" signature="6522:7270" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-            <marker date="1553403888182" expanded="true" signature="7553:8283" ph="INSERT INTO tb_realtor_detail_json... " />
-            <marker date="1553403888182" expanded="true" signature="7699:8265" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553403888182" expanded="true" signature="8638:8889" ph="SELECT rl.pr... tb_realtor_detail_json" />
-            <marker date="1553403888182" expanded="true" signature="9050:9119" ph="DELETE FROM tb_realtor_detail_json... " />
-            <marker date="1553403888182" expanded="true" signature="10755:10913" ph="SELECT prope... tb_realtor_detail_json" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="187" column="37" lean-forward="true" selection-start-line="187" selection-start-column="37" selection-end-line="187" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        <state relative-caret-position="-148">
+          <caret line="97" column="55" lean-forward="false" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

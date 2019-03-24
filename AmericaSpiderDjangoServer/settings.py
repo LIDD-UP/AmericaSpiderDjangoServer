@@ -28,7 +28,7 @@ SECRET_KEY = ')k@)(o_3lk9qr(j8$)_yk*17x)-ny82#24f%glin7&b=$w%okl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'AmericaSpiderDjangoServer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'america_estate_original_db',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'saninco123#@!',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -157,19 +157,18 @@ MYSQL_PASSWORD = '123456'
 import pandas as pd
 
 # local configure
-# server_root_path = r'F:\PycharmProject\AmericaSpiderServer'
 # server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
-server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
+# server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
-# server_root_path = r'/usr/project/AmericaSpiderServer'
+server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
 realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 
-# spider_server_domain = "http://106.12.196.106:5000"
-spider_server_domain = "http://127.0.0.1:5000"
+spider_server_domain = "http://106.12.196.106:5000"
+# spider_server_domain = "http://127.0.0.1:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
 # spider_server_domain = "http://127.0.0.1:5001"
 
@@ -203,10 +202,10 @@ PYMYSQL_POOL = PooledDB(
     host='127.0.0.1',
     port=3306,
     user='root',
-    password='123456',
+    # password='123456',
     # database='america_real_estate',#链接的数据库的名字
-    database='test',
-    # password='saninco123#@!',
-    # database='america_estate_original_db',#链接的数据库的名字
+    # database='test',
+    password='saninco123#@!',
+    database='america_estate_original_db',#链接的数据库的名字
     charset='utf8'
 )

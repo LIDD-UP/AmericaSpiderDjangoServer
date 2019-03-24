@@ -38,8 +38,8 @@ def start_list_spider(request):
     print("启动列表页爬虫")
     spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
     spider_thread1.start()
-    # spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
-    # spider_thread2.start()
+    spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
+    spider_thread2.start()
     return HttpResponse("execute successfully")
 
 
@@ -85,8 +85,8 @@ def start_detail_spider(request):
     print("启动详情页爬虫")
     spider_thread1 = threading.Thread(target=start_detial_spider_requests_fn,args=(spider_detail_start_url,))
     spider_thread1.start()
-    # spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
-    # spider_thread2.start()
+    spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
+    spider_thread2.start()
     return HttpResponse("execute successfully")
 
 
@@ -94,14 +94,10 @@ def detail_json_process(detail_data):
     print("详情页数据插入")
     time_now = time.time()
     data_loads = json.loads(detail_data)
-
     realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
-    print("11")
     realtor_detail_test.traversal_json_data(data_loads)
-    print("完成")
     # for format_data in json_dict['data']:
     #     RealtorDetailJson.objects.filter(property_id=format_data['propertyId']).update(detail_json=json.dumps(format_data['detailJson']))
-
     print("detail 表跟新花费时间{}s".format(time.time()-time_now))
 
 

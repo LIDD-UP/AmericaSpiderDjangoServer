@@ -56,29 +56,38 @@ import time
 
 from AmericaSpiderDjangoServer.settings import PYMYSQL_POOL
 
-conn = PYMYSQL_POOL.connection()
-print(conn)
-from spider_server.process_data import RealtordetailPageMysqlPipeline
-realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
-print("11")
-data ='{"aa":"bb"}'
-
-realtor_detail_test.traversal_json_data(data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# conn = PYMYSQL_POOL.connection()
+# print(conn)
+# from spider_server.process_data import RealtordetailPageMysqlPipeline
+# realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
+# print("11")
+# data ='{"aa":"bb"}'
+#
+# realtor_detail_test.traversal_json_data(data)
 
 # print("请求结束")
 
+import pandas as pd
+import redis
+pool = redis.ConnectionPool(
+                            # host='106.12.196.86',
+                            host='127.0.0.1',
+                            # host = '138.197.143.39',
+                            # host= '106.12.196.106'
+                            # password='123456'
+                            )
+redis_pool = redis.Redis(connection_pool=pool)
+redis_pool.flushdb()
+server_root_path= r'F:\PycharmProject\AmericaSpiderDjangoServer'
+realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria.csv')['countyStateJoin'])))
+
+print(len(realtor_list_search_criteria))
+time_now = time.time()
+for result in realtor_list_search_criteria:
+    redis_pool.lpush('realtor:list_url',result)
+
+print("详情页搜索条件插入redis花费时间{}s".format(time.time() - time_now))
+
+
+list_property_id_list = []
+random_list = []

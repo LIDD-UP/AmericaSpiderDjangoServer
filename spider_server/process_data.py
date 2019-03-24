@@ -80,9 +80,12 @@ class RealtorListProcess(object):
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
         redis_pool.flushdb()
+        import time
+        time_now = time.time()
         for url in realtor_list_search_criteria:
             print(url)
             redis_pool.lpush('realtor:list_url', url)
+        print("list search_criteria 插入时间：{}s".format(time.time()-time_now))
 
     def truncate_list_json_and_split_table(self):
         """
@@ -314,9 +317,12 @@ class SpiderCloseProcess(object):
         '''
         cursor.execute(sql_string)
         print("详情页需要抓取{},插入到redis里面".format(cursor.rowcount))
+        import time
+        time_now = time.time()
         for result in cursor.fetchall():
             redis_pool.lpush('realtor:property_id', 'http://{}'.format(result[0]))
         conn.commit()
+        print("详情页搜索条件插入redis花费时间{}s".format(time.time()-time_now))
 
     def execute_spider_close(self):
         conn = self.conn
