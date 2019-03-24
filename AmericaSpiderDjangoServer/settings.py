@@ -165,7 +165,7 @@ import pandas as pd
 # server configure
 server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
-realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+# realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 
 spider_server_domain = "http://106.12.196.106:5000"
@@ -203,10 +203,10 @@ PYMYSQL_POOL = PooledDB(
     host='127.0.0.1',
     port=3306,
     user='root',
-    # password='123456',
-    # database='america_real_estate',#链接的数据库的名字
+    password='123456',
+    database='america_real_estate',#链接的数据库的名字
     # database='test',
-    password='saninco123#@!',
-    database='america_estate_original_db',#链接的数据库的名字
+    # password='saninco123#@!',
+    # database='america_estate_original_db',#链接的数据库的名字
     charset='utf8'
 )

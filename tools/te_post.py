@@ -78,8 +78,8 @@ pool = redis.ConnectionPool(
                             )
 redis_pool = redis.Redis(connection_pool=pool)
 redis_pool.flushdb()
-# server_root_path= r'F:\PycharmProject\AmericaSpiderDjangoServer'
-server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
+server_root_path= r'F:\PycharmProject\AmericaSpiderDjangoServer'
+# server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria.csv')['countyStateJoin'])))
 
 print(len(realtor_list_search_criteria))

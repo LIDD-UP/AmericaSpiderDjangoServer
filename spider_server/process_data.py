@@ -79,7 +79,7 @@ class RealtorListProcess(object):
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
-        redis_pool.flushdb()
+        # redis_pool.flushdb()
         import time
         time_now = time.time()
         for index,url in enumerate(realtor_list_search_criteria):
@@ -305,7 +305,7 @@ class SpiderCloseProcess(object):
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
-        redis_pool.flushdb()
+        # redis_pool.flushdb()
         cursor = conn.cursor()
         sql_string = '''
             SELECT
