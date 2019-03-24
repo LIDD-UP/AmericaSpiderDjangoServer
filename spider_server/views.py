@@ -28,7 +28,7 @@ def process_before_start_list_spider(request):
     realtor_process.get_list_url()
     realtor_process.truncate_list_json_and_split_table()
     print("将list搜索条件插入redis里面，清空realtor_list_page_json 表和realtor_list_page_json_split 表成功")
-    return HttpResponseRedirect('http://127.0.0.1:8000/spider_server/start_list_spider/')
+    return HttpResponseRedirect('http://138.197.143.39:8000/spider_server/start_list_spider/')
 
 
 def start_list_spider_requests_fn(url):
