@@ -159,15 +159,16 @@ import pandas as pd
 
 # local configure
 # server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
-# server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
+server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
-server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
+# server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
-# realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 
+# 爬虫服务器1
 spider_server_domain = "http://106.12.196.106:5000"
 # spider_server_domain = "http://127.0.0.1:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
@@ -176,13 +177,19 @@ spider_server_domain = "http://106.12.196.106:5000"
 spider_detail_start_url = spider_server_domain +'/start_detail_spider/'
 spider_list_start_url = spider_server_domain + '/start_list_spider/'
 
-
+# 爬虫服务器2
 spider_server_domain2 = "http://106.12.196.86:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
 # spider_server_domain = "http://127.0.0.1:5001"
 
 spider_detail_start_url2 = spider_server_domain2 +'/start_detail_spider/'
 spider_list_start_ur2 = spider_server_domain2 + '/start_list_spider/'
+
+# 爬虫服务器3
+spider_server_domain3 = "http://39.106.17.15:5000"
+
+spider_detail_start_url3 = spider_server_domain3 +'/start_detail_spider/'
+spider_list_start_ur3 = spider_server_domain3 + '/start_list_spider/'
 
 
 import pymysql

@@ -15,8 +15,8 @@ from AmericaSpiderDjangoServer.settings import PYMYSQL_POOL
 
 from spider_server.process_data import RealtorListPageMysqlsqlPipeline,RealtordetailPageMysqlPipeline
 from spider_server.process_data import SpiderCloseProcess, RealtorListProcess
-from AmericaSpiderDjangoServer.settings import spider_list_start_url,spider_detail_start_url,spider_detail_start_url2,spider_list_start_ur2
-
+from AmericaSpiderDjangoServer.settings import spider_list_start_url,spider_detail_start_url,spider_detail_start_url2,spider_list_start_ur2,spider_list_start_ur3,spider_detail_start_url3
+from spider_server.process_data import GetListSearchCriteria,GetDetailSearchCriteria
 
 
 def index(request):
@@ -31,6 +31,22 @@ def process_before_start_list_spider(request):
     return HttpResponseRedirect('http://138.197.143.39:8000/spider_server/start_list_spider/')
 
 
+# def get_list_search_criteria_fn():
+#     get_list_url = GetListSearchCriteria()
+#     get_list_url.get_list_url()
+
+
+def get_list_search_criteria(request):
+    get_list_url = GetListSearchCriteria()
+    if get_list_url.offset == get_list_url.realtor_list_search_criteria_len:
+        return HttpResponseRedirect("null")
+    get_list_url.get_list_url()
+    # thread1 = threading.Thread(target=get_list_search_criteria_fn)
+    # thread1.start()
+    return HttpResponseRedirect("获取list数据插入redis成功")
+
+
+
 def start_list_spider_requests_fn(url):
     requests.get(url)
 
@@ -38,8 +54,10 @@ def start_list_spider(request):
     print("启动列表页爬虫")
     spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
     spider_thread1.start()
-    spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
-    spider_thread2.start()
+    # spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
+    # spider_thread2.start()
+    # spider_thread3 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur3,))
+    # spider_thread3.start()
     return HttpResponse("execute successfully")
 
 
@@ -55,8 +73,6 @@ def list_page_process_fn(list_data):
         bulk_insert_data += [RealtorListPageJson(json_data=json.dumps(house)) for house in json_dict_houses]
     print("list table 插入成功，批量插入了{}条".format(len(bulk_insert_data)))
     RealtorListPageJson.objects.bulk_create(bulk_insert_data)
-
-
 
 
 # 列表页数据的插入操作
@@ -77,6 +93,21 @@ def spider_close_process(request):
     return HttpResponse("list json process successfully")
 
 
+# def get_detail_search_criteria_fn():
+#     get_detail_url = GetDetailSearchCriteria()
+#     get_detail_url.get_detail_url()
+
+
+def get_detail_search_criteria(request):
+    get_detail_url = GetDetailSearchCriteria()
+    if get_detail_url.offset == get_detail_url.realtor_detail_json_query_result_len:
+        return HttpResponseRedirect("null")
+    get_detail_url.get_detail_url()
+    # thread1 = threading.Thread(target=get_detail_search_criteria_fn)
+    # thread1.start()
+    return HttpResponseRedirect("获取detail数据插入redis成功")
+
+
 def start_detial_spider_requests_fn(url):
     requests.get(url=url)
 
@@ -85,8 +116,10 @@ def start_detail_spider(request):
     print("启动详情页爬虫")
     spider_thread1 = threading.Thread(target=start_detial_spider_requests_fn,args=(spider_detail_start_url,))
     spider_thread1.start()
-    spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
-    spider_thread2.start()
+    # spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
+    # spider_thread2.start()
+    # spider_thread3 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url3,))
+    # spider_thread3.start()
     return HttpResponse("execute successfully")
 
 
@@ -136,8 +169,6 @@ def json_data_get_test(request):
     # print(data_dict['aa'])
     # data_dict = json.loads(data)
     # print(data_dict)
-
-
     return HttpResponse(
         "test successful!!!!"
     )

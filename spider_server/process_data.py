@@ -4,13 +4,14 @@
 @file: process_data.py
 @time: 2019/3/15
 """
-
-
-
 import json
+import redis
 # from tools import get_sql_con
 import redis
 from AmericaSpiderDjangoServer.settings import realtor_list_search_criteria
+import time
+from spider_server.models import RealtorDetailJson
+from django.db.models import Q
 
 
 class RealtorListPageMysqlsqlPipeline(object):
@@ -72,19 +73,19 @@ class RealtorListProcess(object):
     def get_list_url():
         import redis
         pool = redis.ConnectionPool(
-                                    # host='106.12.196.86',
-                                    # host='127.0.0.1',
-                                    # host='138.197.143.39',
-                                    host='106.12.196.106',
-                                    # password='123456'
-                                    )
+            # host='106.12.196.86',
+            # host='127.0.0.1',
+            # host = '138.197.143.39',
+            # host='106.12.196.106',
+            host='39.106.17.15',
+            # password='123456'
+        )
         redis_pool = redis.Redis(connection_pool=pool)
-        # redis_pool.flushdb()
-        import time
         time_now = time.time()
-        for index,url in enumerate(realtor_list_search_criteria):
-            print(index)
-            redis_pool.lpush('realtor:list_url', url)
+        with redis_pool.pipeline() as p:
+            for index, result in enumerate(realtor_list_search_criteria):
+                p.lpush("realtor:list_url", result)
+            p.execute()
         print("list search_criteria 插入时间：{}s".format(time.time()-time_now))
 
     def truncate_list_json_and_split_table(self):
@@ -301,11 +302,11 @@ class SpiderCloseProcess(object):
                                     # host='106.12.196.86',
                                     # host='127.0.0.1',
                                     # host = '138.197.143.39',
-                                    host= '106.12.196.106'
+                                    # host= '106.12.196.106',
+                                    host='39.106.17.15',
                                     # password='123456'
                                     )
         redis_pool = redis.Redis(connection_pool=pool)
-        # redis_pool.flushdb()
         cursor = conn.cursor()
         sql_string = '''
             SELECT
@@ -319,8 +320,10 @@ class SpiderCloseProcess(object):
         print("详情页需要抓取{},插入到redis里面".format(cursor.rowcount))
         import time
         time_now = time.time()
-        for result in cursor.fetchall():
-            redis_pool.lpush('realtor:property_id', 'http://{}'.format(result[0]))
+        with redis_pool.pipeline() as p:
+            for result in cursor.fetchall():
+                p.lpush('realtor:property_id', 'http://{}'.format(result[0]))
+            p.execute()
         conn.commit()
         print("详情页搜索条件插入redis花费时间{}s".format(time.time()-time_now))
 
@@ -337,6 +340,87 @@ class SpiderCloseProcess(object):
         # 将搜索条件插入到redis中
         self.get_detail_url(conn)
         conn.close()
+
+
+class GetListSearchCriteria(object):
+    offset = 0
+    realtor_list_search_criteria_len = len(realtor_list_search_criteria)
+    batch_size = 200
+    get_time = 0
+    total_get_time = int(realtor_list_search_criteria_len/batch_size)
+    division = realtor_list_search_criteria_len % batch_size
+    is_exact_division = True if division == 0 else False
+
+    def __init__(self):
+        pool = redis.ConnectionPool(
+            # host='106.12.196.86',
+            # host='127.0.0.1',
+            # host = '138.197.143.39',
+            # host='106.12.196.106',
+            host='39.106.17.15',
+            # password='123456'
+        )
+        redis_pool = redis.Redis(connection_pool=pool)
+        redis_pipeline = redis_pool.pipeline()
+        self.redis_pipeline = redis_pipeline
+
+    def get_list_url(self):
+        present_time = self.get_time + 1
+        if present_time <= self.total_get_time:
+            start_index = self.offset
+            end_index = start_index + self.batch_size -1
+            self.offset += self.batch_size
+            for result in realtor_list_search_criteria[start_index:end_index]:
+                self.redis_pipeline.lpush("realtor:list_url",result)
+            self.redis_pipeline.execute()
+        if present_time > self.total_get_time and self.is_exact_division is False:
+            start_index = self.offset
+            end_index = start_index + self.division
+            self.offset += end_index
+            for result in realtor_list_search_criteria[start_index:end_index]:
+                self.redis_pipeline.lpush("realtor:list_url", result)
+            self.redis_pipeline.execute()
+
+
+class GetDetailSearchCriteria(object):
+    offset = 0
+    realtor_detail_json_query_result = RealtorDetailJson.objects.filter(Q(detail_json=None) | Q(is_dirty='1'))
+    realtor_detail_json_query_result_len = len(realtor_detail_json_query_result)
+    batch_size = 200
+    get_time = 0
+    total_get_time = int(realtor_detail_json_query_result_len / batch_size)
+    division = realtor_detail_json_query_result_len % batch_size
+    is_exact_division = True if division == 0 else False
+
+    def __init__(self):
+        pool = redis.ConnectionPool(
+            # host='106.12.196.86',
+            # host='127.0.0.1',
+            # host = '138.197.143.39',
+            # host='106.12.196.106',
+            host='39.106.17.15',
+            # password='123456'
+        )
+        redis_pool = redis.Redis(connection_pool=pool)
+        redis_pipeline = redis_pool.pipeline()
+        self.redis_pipeline = redis_pipeline
+
+    def get_detail_url(self):
+        present_time = self.get_time + 1
+        if present_time <= self.total_get_time:
+            start_index = self.offset
+            end_index = start_index + self.batch_size - 1
+            self.offset += self.batch_size
+            for result in self.realtor_detail_json_query_result[start_index:end_index]:
+                self.redis_pipeline.lpush("realtor:list_url", result.property_id)
+            self.redis_pipeline.execute()
+        if present_time > self.total_get_time and self.is_exact_division is False:
+            start_index = self.offset
+            end_index = start_index + self.division
+            self.offset += end_index
+            for result in self.realtor_detail_json_query_result[start_index:end_index]:
+                self.redis_pipeline.lpush("realtor:property_id", result.property_id)
+            self.redis_pipeline.execute()
 
 
 

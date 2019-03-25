@@ -73,23 +73,26 @@ pool = redis.ConnectionPool(
                             # host='106.12.196.86',
                             # host='127.0.0.1',
                             # host = '138.197.143.39',
-                            host= '106.12.196.106'
+                            host= '106.12.196.106',
+                            # host='39.106.17.15',
                             # password='123456'
                             )
 redis_pool = redis.Redis(connection_pool=pool)
-redis_pool.flushdb()
 server_root_path= r'F:\PycharmProject\AmericaSpiderDjangoServer'
 # server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria.csv')['countyStateJoin'])))
 
 print(len(realtor_list_search_criteria))
 time_now = time.time()
-for index,result in enumerate(realtor_list_search_criteria):
+for index, result in enumerate(realtor_list_search_criteria):
     print(index)
-    redis_pool.lpush('realtor:list_url',result)
+    # if index==10:
+    #     break
+    redis_pool.lpush('realtor:list_url',result,"test1","test2","test3")
 
 print("详情页搜索条件插入redis花费时间{}s".format(time.time() - time_now))
 
 
 list_property_id_list = []
 random_list = []
+
