@@ -86,6 +86,10 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'saninco123#@!',
         'HOST': '127.0.0.1',
+        # 'NAME': 'test',
+        # 'USER': 'root',
+        # 'PASSWORD': '123456',
+        # 'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
@@ -159,13 +163,13 @@ import pandas as pd
 
 # local configure
 # server_root_path = r'J:\PycharmProject\AmericaSpiderDjangoServer'
-server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
+# server_root_path = r'F:\PycharmProject\AmericaSpiderDjangoServer'
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
-# server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
+server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
-realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria.csv')['countyStateJoin'])))
 
 
 # 爬虫服务器1
@@ -192,6 +196,12 @@ spider_detail_start_url3 = spider_server_domain3 +'/start_detail_spider/'
 spider_list_start_ur3 = spider_server_domain3 + '/start_list_spider/'
 
 
+# list 爬虫执行之前的数据处理之后的url 跳转url
+local_ip = 'http://138.197.143.39:8000/spider_server'
+# local_ip = 'http://127.0.0.1:8000/spider_server'
+redirect_start_list_spider_url = local_ip + '/start_list_spider/'
+
+
 import pymysql
 from DBUtils.PooledDB import PooledDB
 
@@ -210,10 +220,23 @@ PYMYSQL_POOL = PooledDB(
     host='127.0.0.1',
     port=3306,
     user='root',
-    password='123456',
-    database='america_real_estate',#链接的数据库的名字
+    # password='123456',
+    # database='america_real_estate',#链接的数据库的名字
     # database='test',
-    # password='saninco123#@!',
-    # database='america_estate_original_db',#链接的数据库的名字
+    password='saninco123#@!',
+    database='america_estate_original_db',#链接的数据库的名字
     charset='utf8'
 )
+
+import redis
+# redis 管道连接
+pool = redis.ConnectionPool(
+                # host='106.12.196.86',
+                # host='127.0.0.1',
+                # host = '138.197.143.39',
+                host='106.12.196.106',
+                # host='39.106.17.15',
+                # password='123456'
+            )
+redis_pool = redis.Redis(connection_pool=pool)
+

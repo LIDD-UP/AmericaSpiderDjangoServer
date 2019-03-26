@@ -12,7 +12,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     # # 开启列表页爬虫之前的数据库操作
     path('process_before_start_list_spider/', views.process_before_start_list_spider, name='process_before_start_list_spider'),
-    path('get_detail_search_criteria/', views.get_detail_search_criteria, name='get_detail_search_criteria'),
+    path('get_list_search_criteria/', views.get_list_search_criteria, name='get_list_search_criteria'),
     # 开启列表页爬虫
     path('start_list_spider/', views.start_list_spider, name='start_list_spider'),
     # 列表页数据的插入操作
