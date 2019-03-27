@@ -30,13 +30,12 @@ def process_before_start_list_spider(request):
 
     realtor_process = RealtorListProcess(PYMYSQL_POOL)
     #print('直接一次性将搜索条件插入')
-    realtor_process.get_list_url()
+    # realtor_process.get_list_url()
     realtor_process.truncate_list_json_and_split_table()
 
-
     # 激活爬虫 爬虫端作为请求端的做法；会出现丢数据的情况；
-    # get_list_url = GetListSearchCriteria()
-    # get_list_url.get_list_url()
+    get_list_url = GetListSearchCriteria()
+    get_list_url.get_list_url()
 
     print("清空realtor_list_page_json 表和realtor_list_page_json_split 表成功")
     return HttpResponseRedirect(redirect_start_list_spider_url)
@@ -68,8 +67,8 @@ def start_list_spider(request):
     print("启动列表页爬虫")
     spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
     spider_thread1.start()
-    spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
-    spider_thread2.start()
+    # spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
+    # spider_thread2.start()
     # spider_thread3 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur3,))
     # spider_thread3.start()
     return HttpResponse("execute successfully")
@@ -103,8 +102,8 @@ def spider_close_process(request):
     close_spider_process.execute_spider_close()
 
     # 用于激活详情页爬虫，当不是将所有的搜索条件插入redis里面的时候
-    # get_detail_url = GetDetailSearchCriteria()
-    # get_detail_url.get_detail_url()
+    get_detail_url = GetDetailSearchCriteria()
+    get_detail_url.get_detail_url()
 
     return HttpResponse("list json process successfully")
 
@@ -133,8 +132,8 @@ def start_detail_spider(request):
     print("启动详情页爬虫")
     spider_thread1 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url,))
     spider_thread1.start()
-    spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
-    spider_thread2.start()
+    # spider_thread2 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url2,))
+    # spider_thread2.start()
     # spider_thread3 = threading.Thread(target=start_detial_spider_requests_fn, args=(spider_detail_start_url3,))
     # spider_thread3.start()
     return HttpResponse("execute successfully")

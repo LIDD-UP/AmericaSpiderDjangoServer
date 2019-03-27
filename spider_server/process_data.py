@@ -352,7 +352,7 @@ class SpiderCloseProcess(object):
         self.delete_not_exit(conn, 100)
         # 将detail 页的搜索条件搜全部插入到redis中,需要进行批量操作
         # 这个是全部插入的情况，还有一种是redis内存出现问题，少量插入的情况
-        self.get_detail_url(conn)
+        # self.get_detail_url(conn)
 
         # 少量插入以激活爬虫，然后通过爬虫主动请求数据插入到redis里面；
         # 但是不能写在这里，需要写到view里面，不然会报环境错误；
@@ -433,7 +433,8 @@ class GetDetailSearchCriteria(object):
             end_index = start_index + GetDetailSearchCriteria.batch_size - 1
             GetDetailSearchCriteria.offset += GetDetailSearchCriteria.batch_size
             for result in GetDetailSearchCriteria.realtor_detail_json_query_result[start_index:end_index]:
-                self.redis_pipeline.lpush("realtor:property_id", result.property_id)
+                print('property_id', result.property_id)
+                self.redis_pipeline.lpush("realtor:property_id", 'http://{}'.format(result.property_id))
             self.redis_pipeline.execute()
             GetDetailSearchCriteria.get_time += 1
         if present_time > GetDetailSearchCriteria.total_get_time and GetDetailSearchCriteria.is_exact_division is False:
@@ -441,7 +442,8 @@ class GetDetailSearchCriteria(object):
             end_index = start_index + GetDetailSearchCriteria.division
             GetDetailSearchCriteria.offset = end_index
             for result in self.realtor_detail_json_query_result[start_index:end_index]:
-                self.redis_pipeline.lpush("realtor:property_id", result.property_id)
+                print('property_id',result.property_id)
+                self.redis_pipeline.lpush("realtor:property_id", 'http://{}'.format(result.property_id))
             self.redis_pipeline.execute()
 
 
