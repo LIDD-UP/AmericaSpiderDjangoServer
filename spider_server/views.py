@@ -138,4 +138,19 @@ def json_data_get_test(request):
     )
 
 
+def post_json_data_test(request):
+    data = request.get_body
+    print(len(data))
+    return HttpResponse("测试未压缩文件成功")
+
+
+def post_compress_data_test(request):
+    data = request.get_body
+    print(len(data))
+    return HttpResponse("测试压缩文件成功")
+
+
+
+
+
 

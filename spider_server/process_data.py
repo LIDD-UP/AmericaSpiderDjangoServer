@@ -347,9 +347,12 @@ class PostDetailSearchCriteriaToClient(object):
         if cls.spider_client_count == 2:
             print('detail两个客户端爬虫')
             client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result[:split_index-1]]
+            print('爬虫1 数据量{}'.format(len(client_one_data)))
             client_one_data_json = cls.json_data_encapsulation(client_one_data)
+
             client_two_data = [result.property_id for result in cls.realtor_detail_json_query_result[split_index:]]
             client_two_data_json = cls.json_data_encapsulation(client_two_data)
+            print('爬虫1 数据量{}'.format(len(client_two_data)))
 
             spider_client_one_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url,client_one_data_json))
             spider_client_two_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url2,client_two_data_json))

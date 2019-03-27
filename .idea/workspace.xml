@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/tools/send_email.py" />
+    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="start two spider">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" afterPath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
-      <change beforePath="$PROJECT_DIR$/_trial_temp/_trial_marker" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_trial_temp/test.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/get_prime.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/post_json_data.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/spider_server/process_data.py" afterPath="$PROJECT_DIR$/spider_server/process_data.py" />
       <change beforePath="$PROJECT_DIR$/spider_server/urls.py" afterPath="$PROJECT_DIR$/spider_server/urls.py" />
       <change beforePath="$PROJECT_DIR$/spider_server/views.py" afterPath="$PROJECT_DIR$/spider_server/views.py" />
-      <change beforePath="$PROJECT_DIR$/te_sql_insert.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tools/batch_insert_to_redis.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tools/sql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tools/tb_realtor_detail_json.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tools/tb_realtor_list_page_json.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tools/tb_realtor_list_page_json_splite.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tools/record.py" afterPath="$PROJECT_DIR$/tools/record.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,31 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="te_sql_insert.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider_server/te_sql_insert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider_server/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="157">
+              <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,28 +48,18 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="19" column="90" lean-forward="false" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+            <state relative-caret-position="182">
+              <caret line="146" column="27" lean-forward="false" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_email.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/send_email.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="228">
+              <caret line="26" column="91" lean-forward="false" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -111,31 +68,31 @@
       <file leaf-file-name="process_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="346" column="40" lean-forward="true" selection-start-line="346" selection-start-column="40" selection-end-line="346" selection-end-column="40" />
+            <state relative-caret-position="282">
+              <caret line="356" column="102" lean-forward="false" selection-start-line="356" selection-start-column="102" selection-end-line="356" selection-end-column="102" />
               <folding>
                 <element signature="e#96#107#0" expanded="true" />
-                <marker date="1553662810913" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
-                <marker date="1553662810913" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
-                <marker date="1553662810913" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-                <marker date="1553662810913" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
-                <marker date="1553662810913" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-                <marker date="1553662810913" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-                <marker date="1553662810913" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
-                <marker date="1553662810913" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-                <marker date="1553662810913" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
-                <marker date="1553662810913" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
-                <marker date="1553662810913" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
+                <marker date="1553671246251" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
+                <marker date="1553671246251" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
+                <marker date="1553671246251" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+                <marker date="1553671246251" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
+                <marker date="1553671246251" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+                <marker date="1553671246251" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+                <marker date="1553671246251" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
+                <marker date="1553671246251" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+                <marker date="1553671246251" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
+                <marker date="1553671246251" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
+                <marker date="1553671246251" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
+      <file leaf-file-name="record.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/record.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="168">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -199,13 +156,14 @@
         <option value="$PROJECT_DIR$/spider_server/models.py" />
         <option value="$PROJECT_DIR$/tools/batch_insert_to_redis.py" />
         <option value="$PROJECT_DIR$/tools/te_post.py" />
-        <option value="$PROJECT_DIR$/tools/record.py" />
         <option value="$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria_test.csv" />
-        <option value="$PROJECT_DIR$/spider_server/urls.py" />
         <option value="$PROJECT_DIR$/tools/send_email.py" />
-        <option value="$PROJECT_DIR$/spider_server/views.py" />
-        <option value="$PROJECT_DIR$/spider_server/process_data.py" />
         <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
+        <option value="$PROJECT_DIR$/spider_server/process_data.py" />
+        <option value="$PROJECT_DIR$/tools/test" />
+        <option value="$PROJECT_DIR$/tools/record.py" />
+        <option value="$PROJECT_DIR$/spider_server/views.py" />
+        <option value="$PROJECT_DIR$/spider_server/urls.py" />
       </list>
     </option>
   </component>
@@ -216,10 +174,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="369" />
-    <option name="y" value="48" />
-    <option name="width" value="878" />
-    <option name="height" value="646" />
+    <option name="y" value="6" />
+    <option name="width" value="1058" />
+    <option name="height" value="668" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -542,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553651336441</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change to server test environment">
+      <created>1553662828892</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1553662828892</updated>
+    </task>
+    <task id="LOCAL-00013" summary="start two spider">
+      <created>1553664343955</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1553664343955</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -561,14 +532,15 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23723228" sideWeight="0.38426626" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25370675" sideWeight="0.504008" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28830314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23723228" sideWeight="0.61573374" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34839925" sideWeight="0.6142284" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30427632" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.49217004" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760968" sideWeight="0.49217004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49599198" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24130106" sideWeight="0.50782996" order="2" side_tool="true" content_ui="tabs" />
@@ -587,7 +559,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28971255" sideWeight="0.49217004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -613,7 +584,9 @@
     <MESSAGE value="add batch get critetia" />
     <MESSAGE value="change server" />
     <MESSAGE value="use csv as the criteria queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="use csv as the criteria queue" />
+    <MESSAGE value="change to server test environment" />
+    <MESSAGE value="start two spider" />
+    <option name="LAST_COMMIT_MESSAGE" value="start two spider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,14 +595,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tools/batch_insert_to_redis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/virtualenv/Flask/Lib/site-packages/django/db/backends/mysql/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -700,17 +665,17 @@
           <caret line="350" column="34" lean-forward="true" selection-start-line="350" selection-start-column="34" selection-end-line="350" selection-end-column="34" />
           <folding>
             <element signature="e#96#107#0" expanded="true" />
-            <marker date="1553662810913" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
-            <marker date="1553662810913" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-            <marker date="1553662810913" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-            <marker date="1553662810913" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
-            <marker date="1553662810913" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
+            <marker date="1553671246251" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+            <marker date="1553671246251" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+            <marker date="1553671246251" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
           </folding>
         </state>
       </provider>
@@ -744,17 +709,17 @@
           <caret line="307" column="28" lean-forward="false" selection-start-line="307" selection-start-column="21" selection-end-line="307" selection-end-column="28" />
           <folding>
             <element signature="e#96#107#0" expanded="true" />
-            <marker date="1553662810913" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
-            <marker date="1553662810913" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-            <marker date="1553662810913" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-            <marker date="1553662810913" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
-            <marker date="1553662810913" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
+            <marker date="1553671246251" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+            <marker date="1553671246251" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+            <marker date="1553671246251" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
           </folding>
         </state>
       </provider>
@@ -836,17 +801,17 @@
           <caret line="322" column="28" lean-forward="false" selection-start-line="322" selection-start-column="23" selection-end-line="322" selection-end-column="28" />
           <folding>
             <element signature="e#96#107#0" expanded="true" />
-            <marker date="1553662810913" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
-            <marker date="1553662810913" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-            <marker date="1553662810913" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-            <marker date="1553662810913" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
-            <marker date="1553662810913" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
+            <marker date="1553671246251" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+            <marker date="1553671246251" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+            <marker date="1553671246251" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
           </folding>
         </state>
       </provider>
@@ -962,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/record.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria_test.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -985,10 +943,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/te_sql_insert.py">
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="246">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1001,63 +967,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/urls.py">
+    <entry file="file://$PROJECT_DIR$/spider_server/te_sql_insert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="125">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/send_email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="19" column="90" lean-forward="false" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+        <state relative-caret-position="157">
+          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="346" column="40" lean-forward="true" selection-start-line="346" selection-start-column="40" selection-end-line="346" selection-end-column="40" />
+        <state relative-caret-position="282">
+          <caret line="356" column="102" lean-forward="false" selection-start-line="356" selection-start-column="102" selection-end-line="356" selection-end-column="102" />
           <folding>
             <element signature="e#96#107#0" expanded="true" />
-            <marker date="1553662810913" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
-            <marker date="1553662810913" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
-            <marker date="1553662810913" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
-            <marker date="1553662810913" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
-            <marker date="1553662810913" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
-            <marker date="1553662810913" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
-            <marker date="1553662810913" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="771:856" ph="insert into tb_realtor_list_page_json... " />
+            <marker date="1553671246251" expanded="true" signature="1668:1811" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="3403:4148" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="4309:4682" ph="UPDATE tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="6116:7001" ph="INSERT INTO tb_realtor_list_page_json_splite... " />
+            <marker date="1553671246251" expanded="true" signature="6253:7001" ph="SELECT rj.pr... tb_realtor_list_page_json" />
+            <marker date="1553671246251" expanded="true" signature="7284:8014" ph="INSERT INTO tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="7430:7996" ph="SELECT rl.pr... tb_realtor_list_page_json_splite" />
+            <marker date="1553671246251" expanded="true" signature="8369:8620" ph="SELECT rl.pr... tb_realtor_detail_json" />
+            <marker date="1553671246251" expanded="true" signature="8781:8850" ph="DELETE FROM tb_realtor_detail_json... " />
+            <marker date="1553671246251" expanded="true" signature="10042:10200" ph="SELECT prope... tb_realtor_detail_json" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
+    <entry file="file://$PROJECT_DIR$/tools/test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13095" lean-forward="false" selection-start-line="0" selection-start-column="13095" selection-end-line="0" selection-end-column="13095" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/record.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="146" column="27" lean-forward="false" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="26" column="91" lean-forward="false" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
           <folding />
         </state>
       </provider>

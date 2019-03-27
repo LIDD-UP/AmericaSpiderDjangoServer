@@ -24,7 +24,9 @@ urlpatterns = [
     path('process_detail_page_json/', views.process_detail_page_json, name='process_detail_page_json'),
     # 异步测试
     path('json_data_get_test/',views.json_data_get_test, name='json_data_get_test'),
-    path('post_detail_criteria_to_client/',views.post_detail_criteria_to_client, name='post_detail_criteria_to_client')
+    path('post_detail_criteria_to_client/',views.post_detail_criteria_to_client, name='post_detail_criteria_to_client'),
+    path('post_json_data_test/', views.post_json_data_test, name='post_json_data_test'),
+    path('post_compress_data_test/', views.post_compress_data_test, name='post_compress_data_test'),
 
 ]
 
