@@ -12,7 +12,9 @@ import json
 from spider_server.models import RealtorListPageJson,RealtorDetailJson
 from AmericaSpiderDjangoServer.settings import PYMYSQL_POOL
 from AmericaSpiderDjangoServer.settings import redirect_start_list_spider_url
+from AmericaSpiderDjangoServer.settings import SPIDER_CLIENT_NUMBER
 import redis
+import zlib
 
 from spider_server.process_data import RealtorListPageMysqlsqlPipeline,RealtordetailPageMysqlPipeline
 from spider_server.process_data import SpiderCloseProcess, RealtorListProcess
@@ -42,10 +44,14 @@ def start_list_spider_requests_fn(url):
 
 def start_list_spider(request):
     print("启动列表页爬虫")
-    spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
-    spider_thread1.start()
-    spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
-    spider_thread2.start()
+    if SPIDER_CLIENT_NUMBER == 1:
+        spider_thread1 = threading.Thread(target=start_list_spider_requests_fn,args=(spider_list_start_url,))
+        spider_thread1.start()
+    if SPIDER_CLIENT_NUMBER == 2:
+        spider_thread1 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_url,))
+        spider_thread1.start()
+        spider_thread2 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur2,))
+        spider_thread2.start()
     # spider_thread3 = threading.Thread(target=start_list_spider_requests_fn, args=(spider_list_start_ur3,))
     # spider_thread3.start()
     return HttpResponse("execute list spider successfully")
@@ -53,7 +59,14 @@ def start_list_spider(request):
 
 def list_page_process_fn(list_data):
     print('列表页数据插入')
+    time_now = time.time()
+
+    # 解压缩
+    # decompress_data = zlib.decompress(list_data)
+    # list_data = decompress_data.decode()
+
     data_loads = json.loads(list_data)
+
     print(type(data_loads))
     json_dict = json.loads(data_loads)
 
@@ -63,6 +76,7 @@ def list_page_process_fn(list_data):
         bulk_insert_data += [RealtorListPageJson(json_data=json.dumps(house)) for house in json_dict_houses]
     print("list table 插入成功，批量插入了{}条".format(len(bulk_insert_data)))
     RealtorListPageJson.objects.bulk_create(bulk_insert_data)
+    print("list 表跟新花费时间{}s".format(time.time() - time_now))
 
 
 # 列表页数据的插入操作
@@ -98,6 +112,9 @@ def detail_spider_close_process(request):
 
 
 
+
+
+
 # def start_detial_spider_requests_fn(url):
 #     requests.get(url=url)
 #
@@ -117,6 +134,10 @@ def detail_spider_close_process(request):
 def detail_json_process(detail_data):
     print("详情页数据插入")
     time_now = time.time()
+
+    # decompress_data = zlib.decompress(detail_data)
+    # detail_data = decompress_data.decode()
+
     data_loads = json.loads(detail_data)
     realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
     realtor_detail_test.traversal_json_data(data_loads)
@@ -148,6 +169,7 @@ def post_compress_data_test(request):
     data = request.get_body
     print(len(data))
     return HttpResponse("测试压缩文件成功")
+
 
 
 

@@ -90,7 +90,7 @@ DATABASES = {
         # 'USER': 'root',
         # 'PASSWORD': '123456',
         # 'HOST': '127.0.0.1',
-        'PORT': '3306',
+        # 'PORT': '3306',
     }
 }
 
@@ -203,7 +203,7 @@ local_ip = 'http://138.197.143.39:8000/spider_server'
 # local_ip = 'http://127.0.0.1:8000/spider_server'
 redirect_start_list_spider_url = local_ip + '/start_list_spider/'
 redirect_post_detail_criteria_to_client_url = local_ip + '/post_detail_criteria_to_client/'
-SPIDER_CLIENT_NUMBER = 2
+SPIDER_CLIENT_NUMBER = 1
 
 
 
@@ -233,4 +233,14 @@ PYMYSQL_POOL = PooledDB(
     database='america_estate_original_db',#链接的数据库的名字
     charset='utf8'
 )
+
+
+
+
+
+
+
+
+
+
 
