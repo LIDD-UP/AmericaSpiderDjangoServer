@@ -167,14 +167,16 @@ import pandas as pd
 # realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'\tools\realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
 
 # server configure
-server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
+# server_root_path = r'/usr/project/AmericaSpiderDjangoServer'
 # server_root_path = r'/home/saninco/lichanghui/AmericaSpiderServer'
-realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+# realtor_list_search_criteria = list(set(list(pd.read_csv(server_root_path + r'/tools/realtor_app_list_page_search_criteria_test.csv')['countyStateJoin'])))
+
+
 
 
 # 爬虫服务器1
-spider_server_domain = "http://106.12.196.106:5000"
-# spider_server_domain = "http://127.0.0.1:5000"
+# spider_server_domain = "http://106.12.196.106:5000"
+spider_server_domain = "http://127.0.0.1:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
 # spider_server_domain = "http://127.0.0.1:5001"
 
@@ -182,9 +184,11 @@ spider_detail_start_url = spider_server_domain +'/start_detail_spider/'
 spider_list_start_url = spider_server_domain + '/start_list_spider/'
 spider_client_get_detail_search_criteria_url = spider_server_domain +'/get_detail_search_criteria/'
 
+
 # 爬虫服务器2
-spider_server_domain2 = "http://106.12.196.86:5000"
+# spider_server_domain2 = "http://106.12.196.86:5000"
 # spider_server_domain = "http://192.168.0.211:5000"
+spider_server_domain2 = 'http://192.168.0.131:5000'
 # spider_server_domain = "http://127.0.0.1:5001"
 
 
@@ -199,11 +203,11 @@ spider_detail_start_url3 = spider_server_domain3 +'/start_detail_spider/'
 spider_list_start_ur3 = spider_server_domain3 + '/start_list_spider/'
 
 # list 爬虫执行之前的数据处理之后的url 跳转url
-local_ip = 'http://138.197.143.39:8000/spider_server'
-# local_ip = 'http://127.0.0.1:8000/spider_server'
+# local_ip = 'http://138.197.143.39:8000/spider_server'
+local_ip = 'http://127.0.0.1:8000/spider_server'
 redirect_start_list_spider_url = local_ip + '/start_list_spider/'
 redirect_post_detail_criteria_to_client_url = local_ip + '/post_detail_criteria_to_client/'
-SPIDER_CLIENT_NUMBER = 1
+SPIDER_CLIENT_NUMBER = 2
 
 
 

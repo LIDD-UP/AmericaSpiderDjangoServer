@@ -8,7 +8,7 @@ import json
 import redis
 # from tools import get_sql_con
 import redis
-from AmericaSpiderDjangoServer.settings import realtor_list_search_criteria
+
 import time
 from spider_server.models import RealtorDetailJson
 from django.db.models import Q
@@ -314,7 +314,7 @@ class SpiderCloseProcess(object):
         # 找到detail_page_json 表中没有的propertyId，并将它插入到该表中；
         self.insert_detail_data(conn)
         # 删除在split中没有，但是detail有的数据
-        self.delete_not_exit(conn, 100)
+        # self.delete_not_exit(conn, 100)
         conn.close()
 
 
@@ -342,17 +342,17 @@ class PostDetailSearchCriteriaToClient(object):
             print('detail 只有一个客户端爬虫')
             client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result]
             client_one_data_json = cls.json_data_encapsulation(client_one_data)
-            print(client_one_data)
+            # print(client_one_data)
             requests.post(url=spider_client_get_detail_search_criteria_url, json=client_one_data_json)
         if cls.spider_client_count == 2:
             print('detail两个客户端爬虫')
-            client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result[:split_index-1]]
-            print('爬虫1 数据量{}'.format(len(client_one_data)))
+            client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result[:split_index]]
+            print('爬虫1 数据量{}条'.format(len(client_one_data)))
             client_one_data_json = cls.json_data_encapsulation(client_one_data)
 
             client_two_data = [result.property_id for result in cls.realtor_detail_json_query_result[split_index:]]
             client_two_data_json = cls.json_data_encapsulation(client_two_data)
-            print('爬虫1 数据量{}'.format(len(client_two_data)))
+            print('爬虫2 数据量{}条'.format(len(client_two_data)))
 
             spider_client_one_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url,client_one_data_json))
             spider_client_two_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url2,client_two_data_json))

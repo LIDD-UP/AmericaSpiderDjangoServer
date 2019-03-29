@@ -16,7 +16,7 @@ if [ $PythonPid -eq 0 ];
 
         cd /usr/project/AmericaSpiderDjangoServer
         
-        nohup python $Pro  > nohup.out 2>&1 &
+        nohup python $Pro runserver 0.0.0.0:8000 > nohup.out 2>&1 &
 
         echo "`date "+%Y-%m-%d %H:%M:%S"`:$Pro is starting" >> /usr/project/logs/python.log
         sleep 5
