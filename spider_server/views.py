@@ -57,31 +57,56 @@ def start_list_spider(request):
     return HttpResponse("execute list spider successfully")
 
 
+# # 这里有进行处理会出现漏数据的情况；
+# def list_page_process_fn(list_data):
+#     print('列表页数据插入')
+#     time_now = time.time()
+#
+#     # 解压缩
+#     # decompress_data = zlib.decompress(list_data)
+#     # list_data = decompress_data.decode()
+#
+#     data_loads = json.loads(list_data)
+#
+#     print(type(data_loads))
+#     json_dict = json.loads(data_loads)
+#
+#     bulk_insert_data = list()
+#     for item_data in json_dict["data"]:
+#         json_dict_houses = item_data['listings']
+#         bulk_insert_data += [RealtorListPageJson(json_data=json.dumps(house)) for house in json_dict_houses]
+#     print("list table 插入成功，批量插入了{}条".format(len(bulk_insert_data)))
+#     RealtorListPageJson.objects.bulk_create(bulk_insert_data)
+#     print("list 表跟新花费时间{}s".format(time.time() - time_now))
+
+
 def list_page_process_fn(list_data):
     print('列表页数据插入')
     time_now = time.time()
 
     # 解压缩
-    # decompress_data = zlib.decompress(list_data)
-    # list_data = decompress_data.decode()
+    decompress_data = zlib.decompress(list_data)
+    print('解压缩后的数据类型',type(decompress_data))
+    list_data = decompress_data.decode()
+    print('解码后的数据类型', type(list_data))
+    # print(list_data)
 
-    data_loads = json.loads(list_data)
+    # list_data = json.loads(list_data)
 
-    print(type(data_loads))
-    json_dict = json.loads(data_loads)
 
-    bulk_insert_data = list()
-    for item_data in json_dict["data"]:
-        json_dict_houses = item_data['listings']
-        bulk_insert_data += [RealtorListPageJson(json_data=json.dumps(house)) for house in json_dict_houses]
-    print("list table 插入成功，批量插入了{}条".format(len(bulk_insert_data)))
-    RealtorListPageJson.objects.bulk_create(bulk_insert_data)
+    realtor_list_json_process_object = RealtorListPageMysqlsqlPipeline(PYMYSQL_POOL)
+    realtor_list_json_process_object.process_item(list_data)
+
+
     print("list 表跟新花费时间{}s".format(time.time() - time_now))
+
+
 
 
 # 列表页数据的插入操作
 def process_list_page_json(request):
     row_data = request.body
+    # print(row_data)
     executor.submit(list_page_process_fn,list_data=row_data)
     return HttpResponse("服务器已经接受到了list json  存储处理请求")
 
@@ -140,12 +165,13 @@ def detail_json_process(detail_data):
     print("详情页数据插入")
     time_now = time.time()
 
-    # decompress_data = zlib.decompress(detail_data)
-    # detail_data = decompress_data.decode()
+    decompress_data = zlib.decompress(detail_data)
+    detail_data = decompress_data.decode()
+    # 这里只需要loads一次就行，
+    # detail_data = json.loads(detail_data)
 
-    data_loads = json.loads(detail_data)
     realtor_detail_test = RealtordetailPageMysqlPipeline(PYMYSQL_POOL)
-    realtor_detail_test.traversal_json_data(data_loads)
+    realtor_detail_test.traversal_json_data(detail_data)
     # for format_data in json_dict['data']:
     #     RealtorDetailJson.objects.filter(property_id=format_data['propertyId']).update(detail_json=json.dumps(format_data['detailJson']))
     print("detail 表跟新花费时间{}s".format(time.time()-time_now))
