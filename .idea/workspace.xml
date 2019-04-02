@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="add some print log">
-      <change beforePath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/process_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="fix kill and change server" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
+            <state relative-caret-position="114">
+              <caret line="184" column="71" selection-start-line="184" selection-start-column="71" selection-end-line="184" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -45,16 +41,16 @@
         <entry file="file://$PROJECT_DIR$/spider_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="345" column="16" lean-forward="true" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+            <state relative-caret-position="210">
+              <caret line="367" column="60" selection-start-line="367" selection-start-column="60" selection-end-line="367" selection-end-column="60" />
               <folding>
                 <element signature="e#96#107#0" expanded="true" />
               </folding>
@@ -121,8 +117,8 @@
         <option value="$PROJECT_DIR$/tools/record.py" />
         <option value="$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria_test.csv" />
         <option value="$PROJECT_DIR$/spider_server/views.py" />
-        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/process_data.py" />
+        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
       </list>
     </option>
   </component>
@@ -378,7 +374,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553323676032</updated>
       <workItem from="1554100653135" duration="9698000" />
-      <workItem from="1554166544727" duration="5129000" />
+      <workItem from="1554166544727" duration="5882000" />
     </task>
     <task id="LOCAL-00001" summary="add async start spider">
       <created>1553343197623</created>
@@ -471,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554168661595</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix kill and change server">
+      <created>1554172816882</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554172816882</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -486,17 +489,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14827000" />
+    <option name="totallyTimeSpent" value="15580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.2980333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.2980333" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50782996" side_tool="true" weight="0.24130106" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32784185" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.59180325" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48764417" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -531,7 +534,8 @@
     <MESSAGE value="finish lack data circulation" />
     <MESSAGE value="change server environment" />
     <MESSAGE value="add some print log" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some print log" />
+    <MESSAGE value="fix kill and change server" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix kill and change server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -679,24 +683,24 @@
     <entry file="file://$PROJECT_DIR$/spider_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="345" column="16" lean-forward="true" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="367" column="60" selection-start-line="367" selection-start-column="60" selection-end-line="367" selection-end-column="60" />
           <folding>
             <element signature="e#96#107#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="184" column="71" selection-start-line="184" selection-start-column="71" selection-end-line="184" selection-end-column="71" />
         </state>
       </provider>
     </entry>
