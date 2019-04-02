@@ -319,9 +319,23 @@ class SpiderCloseProcess(object):
 
 
 class PostDetailSearchCriteriaToClient(object):
-
-    realtor_detail_json_query_result = RealtorDetailJson.objects.filter(Q(detail_json=None) | Q(is_dirty='1'))
     spider_client_count = SPIDER_CLIENT_NUMBER
+
+    def __init__(self, pool):
+        self.conn = pool.connection()
+        cursor = self.conn.cursor()
+        sql_string = '''
+                    SELECT
+                        property_id
+                    FROM
+                        tb_realtor_detail_json 
+                    where detail_json is NULL 
+                    OR is_dirty='1'
+                '''
+        cursor.execute(sql_string)
+        self.realtor_detail_json_query_result = cursor.fetchall()
+
+
 
     @classmethod
     def json_data_encapsulation(cls, property_id_list):
@@ -333,36 +347,74 @@ class PostDetailSearchCriteriaToClient(object):
     def post_data_spider_client(cls, url, json_data):
         requests.post(url=url, json=json_data)
 
-    @classmethod
-    def get_detail_url(cls):
-        realtor_detail_json_query_result_len = len(cls.realtor_detail_json_query_result)
-        split_index = int(realtor_detail_json_query_result_len/cls.spider_client_count)
+    def get_detail_url(self):
+        realtor_detail_json_query_result_len = len(self.realtor_detail_json_query_result)
+        split_index = int(realtor_detail_json_query_result_len/PostDetailSearchCriteriaToClient.spider_client_count)
 
-        if cls.spider_client_count == 1:
+        if PostDetailSearchCriteriaToClient.spider_client_count == 1:
             print('detail 只有一个客户端爬虫')
-            client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result]
-            client_one_data_json = cls.json_data_encapsulation(client_one_data)
+            client_one_data = [result[0] for result in self.realtor_detail_json_query_result]
+            client_one_data_json = PostDetailSearchCriteriaToClient.json_data_encapsulation(client_one_data)
             print('一只爬虫需要抓取的搜索数量{}'.format(len(client_one_data)))
             requests.post(url=spider_client_get_detail_search_criteria_url, json=client_one_data_json)
-        if cls.spider_client_count == 2:
+        if PostDetailSearchCriteriaToClient.spider_client_count == 2:
             print('detail两个客户端爬虫')
-            client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result[:split_index]]
+            client_one_data = [result[0] for result in PostDetailSearchCriteriaToClient.realtor_detail_json_query_result[:split_index]]
             print('爬虫1 数据量{}条'.format(len(client_one_data)))
-            client_one_data_json = cls.json_data_encapsulation(client_one_data)
+            client_one_data_json = PostDetailSearchCriteriaToClient.json_data_encapsulation(client_one_data)
 
-            client_two_data = [result.property_id for result in cls.realtor_detail_json_query_result[split_index:]]
-            client_two_data_json = cls.json_data_encapsulation(client_two_data)
+            client_two_data = [result[0] for result in PostDetailSearchCriteriaToClient.realtor_detail_json_query_result[split_index:]]
+            client_two_data_json = PostDetailSearchCriteriaToClient.json_data_encapsulation(client_two_data)
             print('爬虫2 数据量{}条'.format(len(client_two_data)))
 
-            spider_client_one_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url,client_one_data_json))
-            spider_client_two_thread = threading.Thread(target=cls.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url2,client_two_data_json))
+            spider_client_one_thread = threading.Thread(target=PostDetailSearchCriteriaToClient.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url,client_one_data_json))
+            spider_client_two_thread = threading.Thread(target=PostDetailSearchCriteriaToClient.post_data_spider_client,args=(spider_client_get_detail_search_criteria_url2,client_two_data_json))
             spider_client_one_thread.start()
             spider_client_two_thread.start()
 
 
-
-
-
+# 会出现内存不足的情况
+# class PostDetailSearchCriteriaToClient(object):
+#     realtor_detail_json_query_result = RealtorDetailJson.objects.filter(Q(detail_json=None) | Q(is_dirty='1'))
+#     spider_client_count = SPIDER_CLIENT_NUMBER
+#
+#     @classmethod
+#     def json_data_encapsulation(cls, property_id_list):
+#         client_one_data_dict = {"data": property_id_list}
+#         client_one_data_json = json.dumps(client_one_data_dict)
+#         return client_one_data_json
+#
+#     @classmethod
+#     def post_data_spider_client(cls, url, json_data):
+#         requests.post(url=url, json=json_data)
+#
+#     @classmethod
+#     def get_detail_url(cls):
+#         realtor_detail_json_query_result_len = len(cls.realtor_detail_json_query_result)
+#         split_index = int(realtor_detail_json_query_result_len / cls.spider_client_count)
+#
+#         if cls.spider_client_count == 1:
+#             print('detail 只有一个客户端爬虫')
+#             client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result]
+#             client_one_data_json = cls.json_data_encapsulation(client_one_data)
+#             print('一只爬虫需要抓取的搜索数量{}'.format(len(client_one_data)))
+#             requests.post(url=spider_client_get_detail_search_criteria_url, json=client_one_data_json)
+#         if cls.spider_client_count == 2:
+#             print('detail两个客户端爬虫')
+#             client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result[:split_index]]
+#             print('爬虫1 数据量{}条'.format(len(client_one_data)))
+#             client_one_data_json = cls.json_data_encapsulation(client_one_data)
+#
+#             client_two_data = [result.property_id for result in cls.realtor_detail_json_query_result[split_index:]]
+#             client_two_data_json = cls.json_data_encapsulation(client_two_data)
+#             print('爬虫2 数据量{}条'.format(len(client_two_data)))
+#
+#             spider_client_one_thread = threading.Thread(target=cls.post_data_spider_client, args=(
+#             spider_client_get_detail_search_criteria_url, client_one_data_json))
+#             spider_client_two_thread = threading.Thread(target=cls.post_data_spider_client, args=(
+#             spider_client_get_detail_search_criteria_url2, client_two_data_json))
+#             spider_client_one_thread.start()
+#             spider_client_two_thread.start()
 
 
 if __name__ == "__main__":

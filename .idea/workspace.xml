@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="change server environment">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/migrations/0001_initial.py" beforeDir="false" />
+    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="add some print log">
+      <change beforePath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spider_server/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/process_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spider_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/views.py" afterDir="false" />
     </list>
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-328">
-              <caret line="210" selection-start-line="210" selection-end-line="210" />
+            <state relative-caret-position="98">
+              <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -45,17 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="137" column="43" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
+            <state relative-caret-position="228">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="343" column="79" lean-forward="true" selection-start-line="343" selection-start-column="79" selection-end-line="343" selection-end-column="79" />
+            <state relative-caret-position="134">
+              <caret line="345" column="16" lean-forward="true" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
               <folding>
                 <element signature="e#96#107#0" expanded="true" />
               </folding>
@@ -92,6 +91,7 @@
       <find>spider_clo</find>
       <find>redis_pool</find>
       <find>delete_not_exit</find>
+      <find>realtor_detail_json_query_result</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,15 +120,15 @@
         <option value="$PROJECT_DIR$/spider_server/urls.py" />
         <option value="$PROJECT_DIR$/tools/record.py" />
         <option value="$PROJECT_DIR$/tools/realtor_app_list_page_search_criteria_test.csv" />
-        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/views.py" />
+        <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/process_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="33" />
-    <option name="y" value="38" />
+    <option name="x" value="26" />
+    <option name="y" value="15" />
     <option name="width" value="1259" />
     <option name="height" value="657" />
   </component>
@@ -378,7 +378,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553323676032</updated>
       <workItem from="1554100653135" duration="9698000" />
-      <workItem from="1554166544727" duration="1567000" />
+      <workItem from="1554166544727" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="add async start spider">
       <created>1553343197623</created>
@@ -464,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554111475251</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add some print log">
+      <created>1554168661595</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554168661595</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -479,18 +486,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11265000" />
+    <option name="totallyTimeSpent" value="14827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.24357034" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.2980333" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50782996" side_tool="true" weight="0.24130106" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32784185" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2409836" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.59180325" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48764417" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -524,14 +530,15 @@
     <MESSAGE value="change server" />
     <MESSAGE value="finish lack data circulation" />
     <MESSAGE value="change server environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="change server environment" />
+    <MESSAGE value="add some print log" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some print log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/spider_server/process_data.py</url>
-          <line>334</line>
+          <line>348</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -671,25 +678,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="137" column="43" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="343" column="79" lean-forward="true" selection-start-line="343" selection-start-column="79" selection-end-line="343" selection-end-column="79" />
-          <folding>
-            <element signature="e#96#107#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        <state relative-caret-position="98">
+          <caret line="238" column="24" lean-forward="true" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="345" column="16" lean-forward="true" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+          <folding>
+            <element signature="e#96#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -121,6 +121,7 @@ def spider_close_process(request):
         close_spider_process = SpiderCloseProcess(PYMYSQL_POOL)
         close_spider_process.execute_spider_close()
         # SpiderCloseProcess.spider_finish_flag = 0
+        print("list 爬虫执行完成，数据处理完成，跳转到发送数据页")
         return HttpResponseRedirect(redirect_post_detail_criteria_to_client_url)
         # return HttpResponse("还有客户端爬虫没有执行完全")
     return HttpResponse("还有客户端爬虫没有执行完全")
@@ -135,7 +136,12 @@ def spider_close_process(request):
 
 def post_detail_criteria_to_client(request):
     print("开始获取详情页搜索条件，发送到客户端")
-    PostDetailSearchCriteriaToClient.get_detail_url()
+
+    post_search_criteria_to_client_object = PostDetailSearchCriteriaToClient(PYMYSQL_POOL)
+    post_search_criteria_to_client_object.get_detail_url()
+
+    # PostDetailSearchCriteriaToClient.get_detail_url()
+
     return HttpResponse("detail 搜索条件发送到爬虫客户端成功")
 
 
