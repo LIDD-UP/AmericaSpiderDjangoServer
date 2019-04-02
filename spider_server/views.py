@@ -113,7 +113,9 @@ def process_list_page_json(request):
 
 # 列表页抓取完全之后的数据处理操作
 def spider_close_process(request):
+
     SpiderCloseProcess.spider_finish_flag += 1
+    print('当前的爬虫个数{}，已经完成的爬虫{}'.format(SpiderCloseProcess.spider_client_count,SpiderCloseProcess.spider_finish_flag))
     if SpiderCloseProcess.spider_finish_flag == SpiderCloseProcess.spider_client_count:
         print('list 客户端爬虫执行完成，处理数据并向客户端爬虫发送抓取数据url')
         close_spider_process = SpiderCloseProcess(PYMYSQL_POOL)
@@ -132,6 +134,7 @@ def spider_close_process(request):
 
 
 def post_detail_criteria_to_client(request):
+    print("开始获取详情页搜索条件，发送到客户端")
     PostDetailSearchCriteriaToClient.get_detail_url()
     return HttpResponse("detail 搜索条件发送到爬虫客户端成功")
 

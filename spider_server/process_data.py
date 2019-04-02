@@ -342,7 +342,7 @@ class PostDetailSearchCriteriaToClient(object):
             print('detail 只有一个客户端爬虫')
             client_one_data = [result.property_id for result in cls.realtor_detail_json_query_result]
             client_one_data_json = cls.json_data_encapsulation(client_one_data)
-            # print(client_one_data)
+            print('一只爬虫需要抓取的搜索数量{}'.format(len(client_one_data)))
             requests.post(url=spider_client_get_detail_search_criteria_url, json=client_one_data_json)
         if cls.spider_client_count == 2:
             print('detail两个客户端爬虫')
