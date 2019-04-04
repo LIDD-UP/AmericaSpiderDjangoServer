@@ -373,6 +373,10 @@ class PostDetailSearchCriteriaToClient(object):
             spider_client_two_thread.start()
 
 
+class CloseDetailSpider(object):
+    close_number = 0
+
+
 # 会出现内存不足的情况
 # class PostDetailSearchCriteriaToClient(object):
 #     realtor_detail_json_query_result = RealtorDetailJson.objects.filter(Q(detail_json=None) | Q(is_dirty='1'))

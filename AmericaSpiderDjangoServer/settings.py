@@ -212,6 +212,11 @@ redirect_post_detail_criteria_to_client_url = local_ip + '/post_detail_criteria_
 SPIDER_CLIENT_NUMBER = 2
 
 
+close_server_shell_path = server_root_path + '/close_realtor_server_sh.sh'
+
+DETAIL_SPIDER_CLOSE_NUMBER = 2
+
+
 
 
 import pymysql

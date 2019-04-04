@@ -21,7 +21,9 @@ from spider_server.process_data import SpiderCloseProcess, RealtorListProcess
 from AmericaSpiderDjangoServer.settings import spider_list_start_url,spider_detail_start_url,spider_detail_start_url2,spider_list_start_ur2,spider_list_start_ur3,spider_detail_start_url3
 from AmericaSpiderDjangoServer.settings import redirect_post_detail_criteria_to_client_url
 from spider_server.process_data import PostDetailSearchCriteriaToClient
-
+from AmericaSpiderDjangoServer.settings import close_server_shell_path
+from AmericaSpiderDjangoServer.settings import DETAIL_SPIDER_CLOSE_NUMBER
+from spider_server.process_data import CloseDetailSpider
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -210,6 +212,15 @@ def post_compress_data_test(request):
     print(len(data))
     return HttpResponse("测试压缩文件成功")
 
+
+def close_server(request):
+    CloseDetailSpider.close_number += 1
+    print("需要关闭的详情页爬虫数量为{}，已经关闭的数量是{}".format(DETAIL_SPIDER_CLOSE_NUMBER, CloseDetailSpider.close_number))
+    if CloseDetailSpider.close_number == DETAIL_SPIDER_CLOSE_NUMBER:
+        import os
+        os.system('/bin/sh {}'.format(close_server_shell_path))
+        return HttpResponse("服务关闭成功")
+    return HttpResponse("还有详情页爬虫没有执行完")
 
 
 

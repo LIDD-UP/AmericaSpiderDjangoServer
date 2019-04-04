@@ -27,6 +27,8 @@ urlpatterns = [
     path('post_detail_criteria_to_client/',views.post_detail_criteria_to_client, name='post_detail_criteria_to_client'),
     path('post_json_data_test/', views.post_json_data_test, name='post_json_data_test'),
     path('post_compress_data_test/', views.post_compress_data_test, name='post_compress_data_test'),
+    # 关闭服务
+    path('close_server/', views.close_server, name='close_server'),
 
 ]
 
