@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="use async to close server">
+    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="add post url state code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/record.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/record.py" afterDir="false" />
     </list>
@@ -43,8 +43,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/record.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+            <state relative-caret-position="370">
+              <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post_request_to_start_all_process.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="8" selection-start-line="3" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -110,18 +119,18 @@
         <option value="$PROJECT_DIR$/spider_server/urls.py" />
         <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/process_data.py" />
-        <option value="$PROJECT_DIR$/post_request_to_start_all_process.py" />
         <option value="$PROJECT_DIR$/post_requests_to_start_all_process_sh.sh" />
         <option value="$PROJECT_DIR$/spider_server/views.py" />
+        <option value="$PROJECT_DIR$/post_request_to_start_all_process.py" />
         <option value="$PROJECT_DIR$/tools/record.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="13" />
+    <option name="x" value="-1" />
+    <option name="y" value="95" />
     <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="height" value="625" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -367,7 +376,7 @@
       <workItem from="1554166544727" duration="9861000" />
       <workItem from="1554250732681" duration="3344000" />
       <workItem from="1554338008149" duration="1274000" />
-      <workItem from="1554340791643" duration="9077000" />
+      <workItem from="1554340791643" duration="11992000" />
     </task>
     <task id="LOCAL-00001" summary="add async start spider">
       <created>1553343197623</created>
@@ -495,7 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1554353323153</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add description of project">
+      <created>1554354590119</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1554354590119</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add post url state code">
+      <created>1554355707333</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1554355707333</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -510,13 +533,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33254000" />
+    <option name="totallyTimeSpent" value="36169000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.24357034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49217004" visible="true" weight="0.22692889" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50782996" side_tool="true" weight="0.24130106" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -561,7 +584,9 @@
     <MESSAGE value="add close server" />
     <MESSAGE value="add post url py file and shell file" />
     <MESSAGE value="use async to close server" />
-    <option name="LAST_COMMIT_MESSAGE" value="use async to close server" />
+    <MESSAGE value="add description of project" />
+    <MESSAGE value="add post url state code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add post url state code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -665,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="3004" column="9" lean-forward="true" selection-start-line="3004" selection-start-column="9" selection-end-line="3004" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post_request_to_start_all_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="100" lean-forward="true" selection-start-line="2" selection-start-column="100" selection-end-line="2" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/close_realtor_server_sh.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -743,10 +760,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/post_request_to_start_all_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="8" selection-start-line="3" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tools/record.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        <state relative-caret-position="370">
+          <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -46,6 +46,15 @@
         关于时间上的分配：
             1：首先开启服务器端服务，然后再开启两个爬虫客户端服务，最后开启requests请求服务，
             requests请求服务一定要和前面的服务有一定的时间间隔，以免前面三个服务未开启；
+            
+            
+几个脚本的位置：
+1：美国服务：/bin/sh /usr/project/AmericaSpiderDjangoServer/start_estate_realtor_server.sh
+2：爬虫服务1：/bin/sh /data/project/AmericaSpiderClientServer/start_estate_realtor_client.sh
+3：爬虫服务2：/bin/sh /data/project/AmericaSpiderClientServer/start_estate_realtor_client.sh
+4：requests请求：/bin/sh /usr/project/AmericaSpiderDjangoServer/post_requests_to_start_all_process_sh.sh
     
+    
+
     
 '''
