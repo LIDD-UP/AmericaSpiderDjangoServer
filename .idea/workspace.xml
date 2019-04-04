@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="fix bug of attribute problem">
-      <change afterPath="$PROJECT_DIR$/close_realtor_server_sh.sh" afterDir="false" />
+    <list default="true" id="2f06a037-24f5-4590-9ce8-92c0f98a429f" name="Default" comment="add close server">
+      <change afterPath="$PROJECT_DIR$/post_request_to_start_all_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post_requests_to_start_all_process_sh.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/process_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_server/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_estate_realtor_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start_estate_realtor_server.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +35,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="216" column="30" lean-forward="true" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
+            <state relative-caret-position="357">
+              <caret line="207" selection-start-line="207" selection-end-line="207" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="218" column="68" lean-forward="true" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+            <state relative-caret-position="337">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -57,17 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="275">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="375" column="32" lean-forward="true" selection-start-line="375" selection-start-column="32" selection-end-line="375" selection-end-column="32" />
+            <state relative-caret-position="93">
+              <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
               <folding>
                 <element signature="e#96#107#0" expanded="true" />
               </folding>
@@ -138,6 +134,8 @@
         <option value="$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py" />
         <option value="$PROJECT_DIR$/spider_server/process_data.py" />
         <option value="$PROJECT_DIR$/spider_server/views.py" />
+        <option value="$PROJECT_DIR$/post_request_to_start_all_process.py" />
+        <option value="$PROJECT_DIR$/post_requests_to_start_all_process_sh.sh" />
       </list>
     </option>
   </component>
@@ -386,7 +384,7 @@
       <workItem from="1554166544727" duration="9861000" />
       <workItem from="1554250732681" duration="3344000" />
       <workItem from="1554338008149" duration="1274000" />
-      <workItem from="1554340791643" duration="3228000" />
+      <workItem from="1554340791643" duration="4189000" />
     </task>
     <task id="LOCAL-00001" summary="add async start spider">
       <created>1553343197623</created>
@@ -493,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554173629123</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add close server">
+      <created>1554345379658</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1554345379659</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -508,7 +513,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27405000" />
+    <option name="totallyTimeSpent" value="28366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -556,7 +561,8 @@
     <MESSAGE value="add some print log" />
     <MESSAGE value="fix kill and change server" />
     <MESSAGE value="fix bug of attribute problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug of attribute problem" />
+    <MESSAGE value="add close server" />
+    <option name="LAST_COMMIT_MESSAGE" value="add close server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -687,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_estate_realtor_server.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/close_realtor_server_sh.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -701,34 +700,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AmericaSpiderDjangoServer/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="216" column="30" lean-forward="true" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="375" column="32" lean-forward="true" selection-start-line="375" selection-start-column="32" selection-end-line="375" selection-end-column="32" />
-          <folding>
-            <element signature="e#96#107#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="207" selection-start-line="207" selection-end-line="207" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="218" column="68" lean-forward="true" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+        <state relative-caret-position="337">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start_estate_realtor_server.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_requests_to_start_all_process_sh.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_request_to_start_all_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_server/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
+          <folding>
+            <element signature="e#96#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
