@@ -213,13 +213,22 @@ def post_compress_data_test(request):
     return HttpResponse("测试压缩文件成功")
 
 
+
+def close_all_server_fn():
+    time_remaind = 120
+    print('还有{}s 关闭服务器'.format(time_remaind))
+    time.sleep(time_remaind)
+    import os
+    os.system('/bin/sh {}'.format(close_server_shell_path))
+
+
 def close_server(request):
     CloseDetailSpider.close_number += 1
     print("需要关闭的详情页爬虫数量为{}，已经关闭的数量是{}".format(DETAIL_SPIDER_CLOSE_NUMBER, CloseDetailSpider.close_number))
     if CloseDetailSpider.close_number == DETAIL_SPIDER_CLOSE_NUMBER:
-        import os
-        os.system('/bin/sh {}'.format(close_server_shell_path))
-        return HttpResponse("服务关闭成功")
+        thread_close_server = threading.Thread(target=close_all_server_fn)
+        thread_close_server.start()
+        return HttpResponse("服务正在关闭中...")
     return HttpResponse("还有详情页爬虫没有执行完")
 
 
