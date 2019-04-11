@@ -53,7 +53,11 @@
 2：爬虫服务1：/bin/sh /data/project/AmericaSpiderClientServer/start_estate_realtor_client.sh
 3：爬虫服务2：/bin/sh /data/project/AmericaSpiderClientServer/start_estate_realtor_client.sh
 4：requests请求：/bin/sh /usr/project/AmericaSpiderDjangoServer/post_requests_to_start_all_process_sh.sh
+
+# sh 启动脚本有可能不会创建log文件，最好是提前创建号文件
     
+    
+
     
     
 
